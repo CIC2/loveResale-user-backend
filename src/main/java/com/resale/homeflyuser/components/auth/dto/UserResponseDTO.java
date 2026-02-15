@@ -24,8 +24,6 @@ public class UserResponseDTO {
     private Integer status;
     private Role role;
     private Set<PermissionDTO> permissions;
-    private String sapId;
-    private String c4cId;
     private List<ProjectDTO> projects;
     private Set<LanguageDTO> languages;
     private String fcmToken;
@@ -43,8 +41,6 @@ public class UserResponseDTO {
             Integer status,
             Role role,
             Set<PermissionDTO> permissions,
-            String sapId,
-            String c4cId,
             Integer teamLeadId,
             String s) {
         this.token = token;
@@ -57,8 +53,6 @@ public class UserResponseDTO {
         this.status = status;
         this.role = role;
         this.permissions = permissions;
-        this.sapId = sapId;
-        this.c4cId = c4cId;
         this.projects = null;
         this.languages = null;
         this.teamLeadId = teamLeadId;
@@ -74,8 +68,6 @@ public class UserResponseDTO {
             Integer status,
             Role role,
             Set<PermissionDTO> permissions,
-            String sapId,
-            String c4cId,
             Integer teamLeadId,
             Boolean onCall
 
@@ -89,8 +81,6 @@ public class UserResponseDTO {
         this.status = status;
         this.role = role;
         this.permissions = permissions;
-        this.sapId = sapId;
-        this.c4cId = c4cId;
         this.projects = null;
         this.languages = null;
         this.teamLeadId = teamLeadId;

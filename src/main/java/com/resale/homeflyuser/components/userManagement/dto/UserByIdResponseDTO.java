@@ -21,8 +21,6 @@ public class UserByIdResponseDTO {
     private Integer status;
     private Role role;
     private Set<PermissionDTO> permissions;
-    private String sapId;
-    private String c4cId;
     private Integer teamLeadId;
     private Set<UserItemsDTO> projects;
     private Set<UserItemsDTO> languages;

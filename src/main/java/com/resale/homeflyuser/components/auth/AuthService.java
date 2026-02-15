@@ -204,8 +204,6 @@ public class AuthService {
                 user.getStatus(),
                 user.getRole(),
                 permissionDTOs,
-                user.getSapId(),
-                user.getC4cId(),
                 projectDTOs,
                 languageDTOs,
                 user.getFcmToken(),

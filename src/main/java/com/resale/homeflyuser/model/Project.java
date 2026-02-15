@@ -33,9 +33,6 @@ public class Project {
     @Column(length = 100)
     private String code;
 
-    @Column(length = 100)
-    private String sapId;
-
     @Column (name = "company_code" , length = 255)
     private String companyCode;
 

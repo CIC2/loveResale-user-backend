@@ -40,11 +40,6 @@ public class User {
     @Column(nullable = false)
     private Integer status;
 
-    @Column(name = "sap_id", length = 100)
-    private String sapId;
-
-    @Column(name = "c4c_id", length = 100)
-    private String c4cId;
 
     @Column(name = "zoom_id")
     private String zoomId;

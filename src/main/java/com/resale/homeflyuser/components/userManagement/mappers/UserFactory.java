@@ -24,8 +24,6 @@ public class UserFactory {
         user.setIsActive(true);
         user.setIsVerified(true);
         user.setStatus(1);
-        user.setSapId(dto.getSapId());
-        user.setC4cId(dto.getC4cId());
 
         if (dto.getAssignToUserId() != null && dto.getRole() == Role.SALESMAN) {
             user.setUserId(dto.getAssignToUserId());

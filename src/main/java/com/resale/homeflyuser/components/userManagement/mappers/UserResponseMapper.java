@@ -32,8 +32,6 @@ public class UserResponseMapper {
                 user.getStatus(),
                 user.getRole(),
                 permissions,
-                user.getSapId(),
-                user.getC4cId(),
                 projects,
                 languages,
                 user.getFcmToken(),

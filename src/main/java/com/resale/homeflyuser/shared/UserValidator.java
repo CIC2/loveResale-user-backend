@@ -75,12 +75,6 @@ public class UserValidator {
 
         if ((role == Role.SALESMAN || role == Role.TEAM_LEAD)) {
 
-            if (dto.getSapId() == null || dto.getSapId().isBlank()) {
-                return messageUtil.getMessage("user.sap_id.required");
-            }
-            if (dto.getC4cId() == null || dto.getC4cId().isBlank()) {
-                return messageUtil.getMessage("user.c4c_id.required");
-            }
 
             if (dto.getLanguageIds() == null || dto.getLanguageIds().isEmpty()) {
                 return messageUtil.getMessage("user.language.required");

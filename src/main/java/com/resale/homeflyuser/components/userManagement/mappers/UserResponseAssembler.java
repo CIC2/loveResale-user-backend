@@ -29,8 +29,6 @@ public class UserResponseAssembler {
                 user.getStatus(),
                 user.getRole(),
                 permissionResolver.resolve(user),
-                user.getSapId(),
-                user.getC4cId(),
                 user.getUserId(),
                 ""
         );

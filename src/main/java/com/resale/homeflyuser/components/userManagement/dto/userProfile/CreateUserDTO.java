@@ -16,8 +16,6 @@ public class CreateUserDTO implements UserAssignmentDTO , UserPermissionDTO {
     private String password;
     private String confirmPassword;
     private Role role;
-    private String sapId;
-    private String c4cId;
     private Integer assignToUserId;
     private List<Integer> permissionIds;
     private Set<Integer> languageIds;
