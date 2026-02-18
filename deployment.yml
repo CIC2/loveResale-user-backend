@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tmg-vso-user-app
+  name: resale-user-app
   namespace: vso-revamp-dev
   labels:
-    app: tmg-vso-user-app
+    app: resale-user-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tmg-vso-user-app
+      app: resale-user-app
   template:
     metadata:
       labels:
-        app: tmg-vso-user-app
+        app: resale-user-app
     spec:
       dnsPolicy: Default
       containers:
-        - name: tmg-vso-user-app
-          image: de.icr.io/cic-tmg-ecommerce/user-managment-backend-dev-app:638-k8-deployment-77980661-20210727153437
+        - name: resale-user-app
+          image: de.icr.io/dev-registry/loveresale-user-backend:latest
           args:
             - --spring.application.json=$(BINDING)
           env:
@@ -52,13 +52,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tmg-vso-user-service-cip
+  name: resale-user-service-cip
   labels:
-    app: tmg-vso-user-app
+    app: resale-user-app
 spec:
   type: ClusterIP
   ports:
     - port: 80
       targetPort: 8025
   selector:
-    app: tmg-vso-user-app
+    app: resale-user-app

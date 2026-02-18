@@ -14,10 +14,10 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>homefly-user</artifactId>
+    <artifactId>resale-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>homefly-user</name>
-    <description>homefly-user</description>
+    <name>resale-user</name>
+    <description>resale-user</description>
 
     <properties>
         <java.version>17</java.version>

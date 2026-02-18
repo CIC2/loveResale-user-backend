@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tmg-vso-user-app-aws
+  name: resale-user-app-aws
   namespace: tmg-ksa-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tmg-vso-user-app-aws
+      app: resale-user-app-aws
   template:
     metadata:
       labels:
-        app: tmg-vso-user-app-aws
+        app: resale-user-app-aws
     spec:
       containers:
-        - name: tmg-vso-user-app
-          image: 559672757114.dkr.ecr.eu-west-3.amazonaws.com/tmg-vso-user-app:latest
+        - name: resale-user-app
+          image: 559672757114.dkr.ecr.eu-west-3.amazonaws.com/resale-user-app:latest
           args:
             - --spring.application.json=$(BINDING)
           env:
@@ -35,14 +35,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tmg-vso-user-service-cip-aws
+  name: resale-user-service-cip-aws
   namespace: tmg-ksa-dev
   labels:
-    app: tmg-vso-user-app-aws
+    app: resale-user-app-aws
 spec:
   type: ClusterIP
   ports:
     - port: 80
       targetPort: 8025
   selector:
-    app: tmg-vso-user-app-aws
+    app: resale-user-app-aws
