@@ -28,3 +28,4 @@ COPY --from=build /build/target/app.jar /app/app.jar
 EXPOSE 8022
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
+

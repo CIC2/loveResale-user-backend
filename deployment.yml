@@ -15,7 +15,8 @@ spec:
       labels:
         app: resale-user-app
     spec:
-      dnsPolicy: Default
+      imagePullSecrets:
+        - name: icr-secret
       containers:
         - name: resale-user-app
           image: de.icr.io/dev-registry/loveresale-user-backend:latest
