@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: resale-user-app
-  namespace: vso-revamp-dev
+  namespace: dev-resale
   labels:
     app: resale-user-app
 spec:
@@ -53,6 +53,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: resale-user-service-cip
+  namespace: dev-resale
   labels:
     app: resale-user-app
 spec:
